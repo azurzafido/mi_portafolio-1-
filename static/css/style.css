@@ -1,0 +1,74 @@
+/* ---------- NAVBAR ---------- */
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 15px;
+    background: #111;
+    margin: 0;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 6px;
+}
+
+.nav ul li a:hover,
+.nav ul li a.active {
+    background: #4b8afa;
+}
+
+/* ---------- ABOUT PAGE ---------- */
+.about-body {
+    background: #f0f4ff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+.about-container {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.about-card {
+    background: white;
+    width: 420px;
+    padding: 25px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.15);
+}
+
+.about-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 4px solid #4b8afa;
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 28px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.about-text {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.info-box {
+    margin-top: 20px;
+    padding: 15px;
+    background: #e7eeff;
+    border-radius: 10px;
+    font-size: 16px;
+}
