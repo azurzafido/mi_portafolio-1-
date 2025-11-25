@@ -1,125 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Portafolio de Fidel Azurza</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(135deg, #007bff, #00c6ff);
-            color: #333;
-        }
-        header {
-            background: rgba(255,255,255,0.95);
-            padding: 30px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-        }
-        header h1 {
-            margin: 0;
-            font-size: 36px;
-            color: #007bff;
-        }
-        header p {
-            font-size: 18px;
-            color: #444;
-            margin-top: 10px;
-        }
-        .profile {
-            text-align: center;
-            margin: 40px auto;
-        }
-        .profile img {
-            width: 220px;
-            height: 220px;
-            border-radius: 50%;
-            border: 6px solid #fff;
-            box-shadow: 0 0 25px rgba(0,0,0,0.3);
-            object-fit: cover;
-        }
-        nav {
-            text-align: center;
-            margin-top: 30px;
-        }
-        nav a {
-            display: inline-block;
-            margin: 0 15px;
-            padding: 12px 20px;
-            background: #007bff;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        nav a:hover {
-            background: #0056b3;
-            transform: scale(1.1);
-        }
-        .intro {
-            max-width: 800px;
-            margin: 40px auto;
-            background: #fff;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 0 20px rgba(0,0,0,0.3);
-            text-align: center;
-        }
-        .intro h2 {
-            color: #007bff;
-            margin-bottom: 15px;
-        }
-        .intro p {
-            font-size: 18px;
-            line-height: 1.6;
-            color: #444;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(255,255,255,0.9);
-            margin-top: 40px;
-            font-size: 14px;
-            color: #555;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <title>Portafolio de Fidel Azurza</title>
+  <link rel="stylesheet" href="static/css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family:'Poppins',sans-serif;
+      margin:0;
+      background: linear-gradient(135deg,#6a1b9a,#007bff,#ff7f50,#32cd32);
+      color:#333;
+    }
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 50px 20px;
+      text-align: center;
+      color:#fff;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.4);
+    }
+    header h1 {
+      margin:0;
+      font-size:48px;
+      font-weight:700;
+      letter-spacing:2px;
+    }
+    header p {
+      font-size:20px;
+      margin-top:10px;
+      color:#ddd;
+    }
+    nav {
+      margin-top:25px;
+    }
+    nav a {
+      display:inline-block;
+      margin:0 12px;
+      padding:10px 18px;
+      background:#ff7f50;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    nav a:hover {
+      background:#007bff;
+      transform:scale(1.1);
+    }
+
+    .profile {
+      text-align:center;
+      margin:40px auto;
+    }
+    .profile img {
+      width:220px;
+      height:220px;
+      border-radius:50%;
+      border:8px solid #fff;
+      box-shadow:0 0 30px rgba(0,0,0,0.4);
+      object-fit:cover;
+    }
+
+    .intro {
+      max-width:1000px;
+      margin:40px auto;
+      background:#fff;
+      padding:40px;
+      border-radius:15px;
+      box-shadow:0 5px 20px rgba(0,0,0,0.3);
+      text-align:center;
+    }
+    .intro h2 {
+      color:#6a1b9a;
+      margin-bottom:20px;
+      font-size:30px;
+    }
+    .intro p {
+      font-size:17px;
+      color:#444;
+      line-height:1.8;
+    }
+
+    .skills {
+      max-width:1100px;
+      margin:50px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:25px;
+      padding:0 20px;
+    }
+    .skill-card {
+      background: linear-gradient(135deg,#e0f7fa,#fceabb);
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      padding:25px;
+      text-align:center;
+      transition:transform 0.3s;
+    }
+    .skill-card:hover {
+      transform:translateY(-10px);
+    }
+    .skill-card h3 {
+      color:#007bff;
+      margin-bottom:10px;
+    }
+    .skill-card p {
+      color:#444;
+      font-size:15px;
+    }
+
+    .projects {
+      max-width:1100px;
+      margin:60px auto;
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+      gap:30px;
+      padding:0 20px;
+    }
+    .card {
+      background:#fff;
+      border-radius:12px;
+      box-shadow:0 5px 15px rgba(0,0,0,0.2);
+      padding:25px;
+      text-align:center;
+      transition:transform 0.3s;
+    }
+    .card:hover {
+      transform:translateY(-10px);
+    }
+    .card h3 {
+      color:#ff7f50;
+      margin-bottom:10px;
+    }
+    .card p {
+      color:#555;
+      font-size:16px;
+    }
+    .btn {
+      display:inline-block;
+      margin-top:15px;
+      padding:10px 18px;
+      background:#007bff;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+    .btn:hover {
+      background:#32cd32;
+      transform:scale(1.05);
+    }
+
+    footer {
+      text-align:center;
+      padding:25px;
+      background:rgba(0,0,0,0.8);
+      color:#fff;
+      margin-top:60px;
+      font-size:14px;
+      letter-spacing:1px;
+    }
+    .social a {
+      display:inline-block;
+      margin:0 10px;
+      padding:10px 14px;
+      background:#ff7f50;
+      color:#fff;
+      text-decoration:none;
+      border-radius:8px;
+      transition:0.3s;
+    }
+    .social a:hover {
+      background:#007bff;
+      transform:scale(1.1);
+    }
+  </style>
 </head>
 <body>
-
-    <!-- ENCABEZADO -->
-    <header>
-        <h1>Fidel Jesús Azurza López</h1>
-        <p>Desarrollador en formación | Tecnologías de Servidor | Linux | Docker | Redes</p>
-    </header>
-
-    <!-- FOTO DE PERFIL -->
-    <div class="profile">
-        <img src="static/img/foto.png" alt="Mi Foto">
-    </div>
-
-    <!-- NAVEGACIÓN -->
+  <header>
+    <h1>Fidel Jesús Azurza López</h1>
+    <p>Estudiante de APSTI | Linux | Docker | Redes</p>
     <nav>
-        <a href="about.html" target="_blank">Sobre mí</a>
-        <a href="contact.html" target="_blank">Contacto</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
     </nav>
+  </header>
 
-    <!-- INTRODUCCIÓN -->
-    <div class="intro">
-        <h2>Bienvenido a mi Portafolio</h2>
-        <p>
-            Aquí encontrarás mis proyectos, prácticas y experiencias en el mundo de la tecnología. 
-            Mi pasión está en la administración de servidores, la implementación de servicios en Linux 
-            y el uso de herramientas modernas como Docker y SSH. 
-            Explora mi portafolio y descubre cómo estoy construyendo mi camino profesional.
-        </p>
+  <div class="profile">
+    <img src="static/img/foto.png" alt="Mi Foto">
+  </div>
+
+  <div class="intro">
+    <h2>Bienvenido a mi Portafolio</h2>
+    <p>
+      Soy un estudiante apasionado por la tecnología y la administración de servidores.  
+      Aquí encontrarás mis proyectos, habilidades y experiencias en Linux, Docker y Redes.  
+      Mi objetivo es crecer como profesional y aportar soluciones innovadoras en el mundo digital.
+    </p>
+  </div>
+
+  <section class="skills">
+    <div class="skill-card"><h3>🐧 Linux</h3><p>Administración de servidores</p></div>
+    <div class="skill-card"><h3>🐳 Docker</h3><p>Gestión de contenedores</p></div>
+    <div class="skill-card"><h3>🔑 SSH</h3><p>Acceso remoto seguro</p></div>
+    <div class="skill-card"><h3>🌐 Redes</h3><p>Conectividad y seguridad</p></div>
+  </section>
+
+  <section class="projects">
+    <div class="card">
+      <h3>Proyecto 1</h3>
+      <p>Servidor web en Linux con Apache.</p>
+      <a href="proyecto1.html" class="btn">Ver más</a>
     </div>
+    <div class="card">
+      <h3>Proyecto 2</h3>
+      <p>Contenedores Docker para aplicaciones escalables.</p>
+      <a href="proyecto2.html" class="btn">Ver más</a>
+    </div>
+    <div class="card">
+      <h3>Proyecto 3</h3>
+      <p>Redes y servicios SSH seguros.</p>
+      <a href="proyecto3.html" class="btn">Ver más</a>
+    </div>
+  </section>
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
-        © 2025 Fidel Azurza | Todos los derechos reservados
-    </footer>
-
+  <footer>
+    © 2025 Fidel Azurza | azurzafidel2002@gmail.com | Cel: 969012473
+    <div class="social">
+      <a href="mailto:azurzafidel2002@gmail.com">Correo</a>
+      <a href="https://wa.me/51969012473" target="_blank">WhatsApp</a>
+      <a href="https://github.com/" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
 </body>
 </html>

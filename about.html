@@ -2,54 +2,186 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Sobre mí - Portafolio de Fidel Azurza</title>
+  <title>Sobre mí - Fidel Azurza</title>
   <link rel="stylesheet" href="static/css/style.css">
   <style>
-    body { font-family: Arial, sans-serif; background: #f0f0f0; margin: 0; }
-    .container {
-      max-width: 800px; margin: 40px auto; background: #fff; padding: 40px;
-      border-radius: 15px; box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      background: linear-gradient(135deg, #6a1b9a, #007bff, #ff7f50); /* morado + azul + naranja */
+      color: #333;
     }
-    h1 { color: #007bff; text-align: center; margin-bottom: 25px; font-size: 32px; }
-    .about-text { font-size: 18px; color: #444; line-height: 1.8; text-align: justify; }
-    .highlight { color: #007bff; font-weight: bold; }
-    .skills { margin-top: 30px; }
-    .skills h2 { color: #007bff; margin-bottom: 15px; }
-    .skills ul { list-style: none; padding: 0; }
-    .skills ul li {
-      background: #e7eeff; margin: 8px 0; padding: 10px; border-radius: 8px;
-      font-size: 16px; display: flex; align-items: center;
+    header {
+      background: rgba(0,0,0,0.7);
+      padding: 40px;
+      text-align: center;
+      color: #fff;
+      box-shadow: 0 2px 15px rgba(0,0,0,0.4);
     }
-    .skills ul li img { width: 28px; margin-right: 10px; }
+    header h1 {
+      margin: 0;
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
+    nav {
+      margin-top: 20px;
+    }
+    nav a {
+      display: inline-block;
+      margin: 0 12px;
+      padding: 10px 18px;
+      background: #ff7f50;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: #007bff;
+      transform: scale(1.1);
+    }
+
+    .section {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    .section h2 {
+      text-align: center;
+      color: #6a1b9a;
+      margin-bottom: 20px;
+      font-size: 28px;
+      border-bottom: 3px solid #ff7f50;
+      padding-bottom: 10px;
+    }
+    .section p {
+      font-size: 17px;
+      color: #444;
+      line-height: 1.8;
+      text-align: center;
+    }
+
+    .info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+    }
+    .card {
+      background: linear-gradient(135deg, #e0f7fa, #fceabb);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      padding: 25px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    .card h3 {
+      color: #007bff;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+    .card p {
+      font-size: 16px;
+      color: #333;
+    }
+
+    .skills {
+      margin-top: 40px;
+    }
+    .skills h2 {
+      text-align: center;
+      color: #ff7f50;
+      margin-bottom: 20px;
+    }
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 25px;
+    }
+    .skill-card {
+      background: linear-gradient(135deg, #d1c4e9, #bbdefb);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+    .skill-card:hover {
+      transform: translateY(-8px);
+    }
+    .skill-card h3 {
+      color: #6a1b9a;
+      margin-bottom: 10px;
+    }
+    .skill-card p {
+      color: #444;
+      font-size: 15px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: rgba(0,0,0,0.8);
+      color: #fff;
+      margin-top: 50px;
+      font-size: 14px;
+      letter-spacing: 1px;
+    }
   </style>
 </head>
 <body>
-  <div class="container">
+  <header>
     <h1>Sobre mí</h1>
-    <p class="about-text">
-      Hola, soy <span class="highlight">Fidel Jesús Azurza López</span>, un estudiante apasionado por la 
-      <span class="highlight">administración de servidores</span>, la implementación de servicios en 
-      <span class="highlight">Linux</span> y el uso de tecnologías como <span class="highlight">Docker</span> y 
-      <span class="highlight">SSH</span>. Mi objetivo es convertirme en un profesional capaz de diseñar, 
-      gestionar y optimizar infraestructuras tecnológicas modernas.
-    </p>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="about.html">Sobre mí</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
+  </header>
 
-    <p class="about-text">
-      Me considero una persona curiosa, perseverante y con gran interés en aprender nuevas herramientas 
-      que impulsen la innovación. En este portafolio encontrarás mis proyectos, prácticas y experiencias 
-      que reflejan mi compromiso con el mundo de la tecnología.
+  <section class="section">
+    <h2>Quién soy</h2>
+    <p>
+      Hola, soy <strong>Fidel Jesús Azurza López</strong>, estudiante apasionado por la administración de servidores, 
+      la implementación de servicios en <span style="color:#007bff;font-weight:bold;">Linux</span> y el uso de tecnologías modernas como 
+      <span style="color:#ff7f50;font-weight:bold;">Docker</span> y <span style="color:#6a1b9a;font-weight:bold;">SSH</span>.  
+      Mi objetivo es convertirme en un profesional capaz de diseñar, gestionar y optimizar infraestructuras tecnológicas modernas.
     </p>
+  </section>
 
-    <div class="skills">
-      <h2>Mis principales habilidades</h2>
-      <ul>
-        <li><img src="static/img/Linux.png" alt="Linux"> Administración de servidores Linux</li>
-        <li><img src="static/img/docker.png" alt="Docker"> Gestión de contenedores con Docker</li>
-        <li><img src="static/img/ssh.png" alt="SSH"> Configuración de servicios SSH</li>
-        <li><img src="static/img/network.png" alt="Redes"> Redes y seguridad informática</li>
-        <li><img src="static/img/problem.png" alt="Resolución"> Resolución de problemas técnicos</li>
-      </ul>
+  <section class="section">
+    <h2>Información personal</h2>
+    <div class="info-grid">
+      <div class="card"><h3>👤 Nombre</h3><p>Fidel Jesús Azurza López</p></div>
+      <div class="card"><h3>📧 Correo</h3><p>azurzafidel2002@gmail.com</p></div>
+      <div class="card"><h3>📱 Celular</h3><p>969012473</p></div>
+      <div class="card"><h3>🆔 DNI</h3><p>71062702</p></div>
+      <div class="card"><h3>🏫 Institución</h3><p>IESTP José María Arguedas</p></div>
+      <div class="card"><h3>💻 Carrera</h3><p>APSTI</p></div>
     </div>
-  </div>
+  </section>
+
+  <section class="section skills">
+    <h2>Mis principales habilidades</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>🐧 Linux</h3><p>Administración de servidores</p></div>
+      <div class="skill-card"><h3>🐳 Docker</h3><p>Gestión de contenedores</p></div>
+      <div class="skill-card"><h3>🔑 SSH</h3><p>Servicios seguros y acceso remoto</p></div>
+      <div class="skill-card"><h3>🌐 Redes</h3><p>Conectividad y seguridad informática</p></div>
+      <div class="skill-card"><h3>🛠 Resolución</h3><p>Solución de problemas técnicos</p></div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Fidel Azurza | Todos los derechos reservados
+  </footer>
 </body>
 </html>
